@@ -1,0 +1,28 @@
+{
+    "name": "nelwhix/fakinlede-exam",
+    "description": "a simple php function that counts the time each letter is repeated in a string",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Nelwhix\\FakinledeExam\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nelson Isioma",
+            "email": "58360242+Nelwhix@users.noreply.github.com"
+        }
+    ],
+    "require-dev": {
+        "pestphp/pest": "^1.22"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "require": {
+        "fakerphp/faker": "^1.21"
+    }
+}
