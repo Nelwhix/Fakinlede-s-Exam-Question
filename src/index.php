@@ -21,15 +21,17 @@ namespace Nelwhix\FakinledeExam;
         $countArray = [];
 
         for ($i = 0; $i < strlen($statement); $i++) {
+            if (in_array($statement[$i], array_keys($countArray))) {
+                continue;
+            }
+
             $count = countLetterOccurence($statement[$i], $statement);
 
-            $countArray[] = [
-                $statement[$i] => $count
-            ];
-
-            $statement = str_ireplace($statement[$i], "", $statement);
+            $countArray[$statement[$i]] = $count;
         }
 
         return $countArray;
     }
+
+    var_dump(countEachLetterOccurence("indomie"));
 
