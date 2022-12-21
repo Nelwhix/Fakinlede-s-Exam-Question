@@ -4,9 +4,7 @@
     "type": "library",
     "license": "MIT",
     "autoload": {
-        "psr-4": {
-            "Nelwhix\\FakinledeExam\\": "src/"
-        }
+        "files": ["src/index.php"]
     },
     "authors": [
         {

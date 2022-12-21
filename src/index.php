@@ -2,8 +2,7 @@
 
 namespace Nelwhix\FakinledeExam;
 
-    function countLetterOccurence(string $letter, string $statement): int  {
-        $statement = strtolower($statement);
+    function countLetterOccurrence(string $letter, string $statement): int  {
         $stringLength = strlen($statement);
 
         $count = 0;
@@ -17,21 +16,24 @@ namespace Nelwhix\FakinledeExam;
         return $count;
     }
 
-    function countEachLetterOccurence(string $statement): array {
-        $countArray = [];
+    function countEachLetterOccurrence(string $statement): array {
+        // Turn all characters to lowercase and strip whitespaces
+        $statement = strtolower($statement);
+        $statement = str_replace(" ", "", $statement);
 
-        for ($i = 0; $i < strlen($statement); $i++) {
+        $countArray = [];
+        $stringLength = strlen($statement);
+
+        for ($i = 0; $i < $stringLength; $i++) {
             if (in_array($statement[$i], array_keys($countArray))) {
                 continue;
             }
 
-            $count = countLetterOccurence($statement[$i], $statement);
+            $count = countLetterOccurrence($statement[$i], $statement);
 
             $countArray[$statement[$i]] = $count;
         }
 
         return $countArray;
     }
-
-    var_dump(countEachLetterOccurence("indomie"));
 
